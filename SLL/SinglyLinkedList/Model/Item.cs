@@ -29,6 +29,5 @@ namespace SinglyLinkedList.Model
         public Item<T> Next { get; set; }
 
         public override string ToString() => Data.ToString();
-
     }
 }

@@ -1,0 +1,13 @@
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\bin\Release\netcoreapp3.1\SinglyLinkedList.exe
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\bin\Release\netcoreapp3.1\SinglyLinkedList.deps.json
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\bin\Release\netcoreapp3.1\SinglyLinkedList.runtimeconfig.json
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\bin\Release\netcoreapp3.1\SinglyLinkedList.runtimeconfig.dev.json
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\bin\Release\netcoreapp3.1\SinglyLinkedList.dll
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\bin\Release\netcoreapp3.1\SinglyLinkedList.pdb
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\obj\Release\netcoreapp3.1\SinglyLinkedList.csprojAssemblyReference.cache
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\obj\Release\netcoreapp3.1\SinglyLinkedList.AssemblyInfoInputs.cache
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\obj\Release\netcoreapp3.1\SinglyLinkedList.AssemblyInfo.cs
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\obj\Release\netcoreapp3.1\SinglyLinkedList.csproj.CoreCompileInputs.cache
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\obj\Release\netcoreapp3.1\SinglyLinkedList.dll
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\obj\Release\netcoreapp3.1\SinglyLinkedList.pdb
+F:\ElevenDataStructuresImplementation\SLL\SinglyLinkedList\obj\Release\netcoreapp3.1\SinglyLinkedList.genruntimeconfig.cache

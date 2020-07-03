@@ -5,7 +5,7 @@ namespace SinglyLinkedList.Model
     /// <summary>
     /// Односвязный список.
     /// </summary>
-    internal sealed class LinkedList<T> : IEnumerable, ISingleLinkedList<T>
+    internal sealed class LinkedList<T> : IEnumerable, ISingleLinkedList<T>, IClear<T>, Insert<T>
     {
         /// <summary>
         /// Первый элемент списка.
@@ -38,9 +38,6 @@ namespace SinglyLinkedList.Model
             SetHeadAndTail(data);
         }
 
-        /// <summary>
-        /// Добавление элемента в конец списока.
-        /// </summary>
         public void Add(T data)
         {
             Item<T> item = new Item<T>(data);
@@ -54,9 +51,6 @@ namespace SinglyLinkedList.Model
             else SetHeadAndTail(data);
         }
 
-        /// <summary>
-        /// Удаление элемента из списка.
-        /// </summary>
         public void Delete(T data)
         {
             if(Head != null)
@@ -89,9 +83,6 @@ namespace SinglyLinkedList.Model
             else SetHeadAndTail(data);
         }
 
-        /// <summary>
-        /// Очистить список.
-        /// </summary>
         public void Clear()
         {
             Head  = null;
@@ -99,9 +90,6 @@ namespace SinglyLinkedList.Model
             Count = 0;
         }
 
-        /// <summary>
-        /// Добавить данные в начало списка.
-        /// </summary>
         public void AppendHead(T data)
         {
             var item = new Item<T>(data)
@@ -114,9 +102,6 @@ namespace SinglyLinkedList.Model
             Count++;
         }
 
-        /// <summary>
-        /// Вставить данные после скомого значения.
-        /// </summary>
         public void InsertAfter(T target, T data)
         {
             if (Head != null)
@@ -144,7 +129,7 @@ namespace SinglyLinkedList.Model
             }
             else
             {
-                //TODO: 
+                //TODO:
                 //Если список пустой, то не добавлять данные.
                 //SetHeadAndTail(target);
 

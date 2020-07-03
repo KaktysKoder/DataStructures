@@ -79,7 +79,7 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// Метод для минимизации повторяющегося кода; 
-        /// Метод содержит: foreach (int item in instance)
+        /// Метод содержит: foreach (int item in instance).
         /// </summary>
         private static void ForEach(LinkedList<int> instance)
         {
@@ -101,6 +101,5 @@ namespace SinglyLinkedList
             Console.WriteLine($"{message}");
             Console.WriteLine("=====================================================================\n");
         }
-
     }
 }
