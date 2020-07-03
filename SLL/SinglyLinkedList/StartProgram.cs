@@ -16,6 +16,7 @@ namespace SinglyLinkedList
             {
                 var list = new LinkedList<int>();
 
+                //Добавление элементов
                 list.Add(10);
                 list.Add(20);
                 list.Add(30);
@@ -26,6 +27,7 @@ namespace SinglyLinkedList
                     Console.Write($"{item} ");
                 }
 
+                //удаление элементов
                 list.Delete(6);
                 list.Delete(10);
                 list.Delete(20);
@@ -37,6 +39,26 @@ namespace SinglyLinkedList
                 {
                     Console.Write($"{item} ");
                 }
+
+                //Добавить 100 в начало списка
+                list.AppendHead(100);
+
+                Console.WriteLine();
+
+                foreach (var item in list)
+                {
+                    Console.Write($"{item} ");
+                }
+
+                //Очистка списка
+                list.Clear();
+
+                Console.WriteLine();
+
+                foreach (var item in list)
+                {
+                    Console.Write($"{item} ");
+                }          
             }
             catch (ArgumentNullException exc)
             {
@@ -46,5 +68,37 @@ namespace SinglyLinkedList
             }
         }
 
+        private static void TestInsert()
+        {
+            var list = new LinkedList<int>();
+
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+
+            foreach (var item in list)
+            {
+                Console.Write($"{item} ");
+            }
+
+            list.InsertAfter(10, 40);
+
+            Console.WriteLine();
+
+            foreach (var item in list)
+            {
+                Console.Write($"{item} ");
+            }
+
+            list.InsertAfter(10, 40000);
+
+            Console.WriteLine();
+
+            foreach (var item in list)
+            {
+                Console.Write($"{item} ");
+            }
+        }
     }
 }

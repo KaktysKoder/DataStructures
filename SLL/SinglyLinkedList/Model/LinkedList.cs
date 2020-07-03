@@ -86,6 +86,7 @@ namespace SinglyLinkedList.Model
                     current  = current.Next;
                 }
             }
+            else SetHeadAndTail(data);
         }
 
         /// <summary>
@@ -98,12 +99,55 @@ namespace SinglyLinkedList.Model
             Count = 0;
         }
 
+        /// <summary>
+        /// Добавить данные в начало списка.
+        /// </summary>
         public void AppendHead(T data)
         {
-            var item = new Item<T>(data);
+            var item = new Item<T>(data)
+            {
+                Next = Head
+            };
 
-            item.Next = Head;
             Head = item;
+
+            Count++;
+        }
+
+        public void InsertAfter(T target, T data)
+        {
+            if (Head != null)
+            {
+                var current = Head;
+
+                while(current != null)
+                {
+                    if (current.Data.Equals(target))
+                    {
+                        //Элемент который мы хотим вставить.
+                        var item = new Item<T>(data);
+
+                        item.Next = Head.Next;
+                        Head.Next = item;
+                        Count++;
+
+                        return;
+                    }
+                    else
+                    {
+                        current = current.Next;
+                    }
+                }
+            }
+            else
+            {
+                //TODO: 
+                //Если список пустой, то не добавлять данные.
+                //SetHeadAndTail(target);
+
+                //Вставить данные
+                //Add(data);
+            }
         }
 
         private void SetHeadAndTail(T data)
