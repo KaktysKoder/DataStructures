@@ -7,28 +7,43 @@ namespace SinglyLinkedList
     {
         private static void Main()
         {
+            InterfaceForTestSLL();
+        }
+        
+        private static void InterfaceForTestSLL()
+        {
             try
             {
-                var list = new Model.LinkedList<int>();
+                var list = new LinkedList<int>();
 
                 list.Add(10);
                 list.Add(20);
                 list.Add(30);
                 list.Add(40);
-                list.Add(50);
-                list.Add(60);
-                list.Add(70);
-                list.Add(80);
-                list.Add(90);
 
-  
+                foreach (var item in list)
+                {
+                    Console.Write($"{item} ");
+                }
+
+                list.Delete(10);
+                list.Delete(20);
+                list.Delete(30);
+
+                Console.WriteLine();
+
+                foreach (var item in list)
+                {
+                    Console.Write($"{item} ");
+                }
             }
-            catch (Exception exc)
+            catch (ArgumentNullException exc)
             {
-                Console.WriteLine(exc.Message);
-                Console.WriteLine(exc.StackTrace);
+                Console.WriteLine($"Message:    ---> {exc.Message}   ");
+                Console.WriteLine($"StackTrace: ---> {exc.StackTrace}");
+                Console.WriteLine($"TargetSite: ---> {exc.TargetSite}");
             }
         }
-        
+
     }
 }
