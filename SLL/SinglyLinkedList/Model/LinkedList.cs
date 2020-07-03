@@ -1,35 +1,46 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace SinglyLinkedList.Model
 {
+    /// <summary>
+    /// Односвязный список.
+    /// </summary>
     internal sealed class LinkedList<T> : IEnumerable
     {
+        /// <summary>
+        /// Первый элемент списка.
+        /// </summary>
         public Item<T> Head { get; private set; }
+
+        /// <summary>
+        /// Последний элемент списка.
+        /// </summary>
         public Item<T> Tail { get; private set; }
+
+        /// <summary>
+        /// Кол-во элементов списка.
+        /// </summary>
         public int Count    { get; private set; }
 
+        /// <summary>
+        /// Создание пустого списка.
+        /// </summary>
         public LinkedList()
         {
-            Head  = null;
-            Tail  = null;
-            Count = 0;
+            Clear();
         }
 
+        /// <summary>
+        /// Создание списка с начальным элементом.
+        /// </summary>
         public LinkedList(T data)
         {
             SetHeadAndTail(data);
         }
 
-        private void SetHeadAndTail(T data)
-        {
-            Item<T> item = new Item<T>(data);
-
-            Head  = item;
-            Tail  = item;
-            Count = 1;
-        }
-
+        /// <summary>
+        /// Добавление элемента в конец списока.
+        /// </summary>
         public void Add(T data)
         {
             Item<T> item = new Item<T>(data);
@@ -43,6 +54,9 @@ namespace SinglyLinkedList.Model
             else SetHeadAndTail(data);
         }
 
+        /// <summary>
+        /// Удаление элемента из списка.
+        /// </summary>
         public void Delete(T data)
         {
             if(Head != null)
@@ -51,6 +65,7 @@ namespace SinglyLinkedList.Model
                 {
                     Head = Head.Next;
                     Count--;
+
                     return;
                 }
 
@@ -63,6 +78,7 @@ namespace SinglyLinkedList.Model
                     {
                         previous.Next = current.Next;
                         Count--;
+
                         return;
                     }
 
@@ -72,9 +88,39 @@ namespace SinglyLinkedList.Model
             }
         }
 
+        /// <summary>
+        /// Очистить список.
+        /// </summary>
+        public void Clear()
+        {
+            Head  = null;
+            Tail  = null;
+            Count = 0;
+        }
+
+        public void AppendHead(T data)
+        {
+            var item = new Item<T>(data);
+
+            item.Next = Head;
+            Head = item;
+        }
+
+        private void SetHeadAndTail(T data)
+        {
+            Item<T> item = new Item<T>(data);
+
+            Head  = item;
+            Tail  = item;
+            Count = 1;
+        }
+
+        /// <summary>
+        /// Получить перечисление всех элементов списка.
+        /// </summary>
         public IEnumerator GetEnumerator()
         {
-            var current = Head;
+            Item<T> current = Head;
 
             while(current != null)
             {
@@ -83,5 +129,7 @@ namespace SinglyLinkedList.Model
                 current = current.Next;
             }
         }
+
+        public override string ToString() => $"Linked List {Count} элементов";
     }
 }
