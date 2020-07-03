@@ -7,58 +7,61 @@ namespace SinglyLinkedList
     {
         private static void Main()
         {
-            InterfaceForTestSLL();
+            FunctionalityCheck();
         }
-        
-        private static void InterfaceForTestSLL()
+
+        private static void FunctionalityCheck()
         {
             try
             {
-                var list = new LinkedList<int>();
+                TitleMessage("Создание целочисленного списка числе 10, 20, ..., 90, 100.");
 
-                //Добавление элементов
-                list.Add(10);
-                list.Add(20);
-                list.Add(30);
-                list.Add(40);
-
-                foreach (var item in list)
+                LinkedList<int> numList = new LinkedList<int>()
                 {
-                    Console.Write($"{item} ");
-                }
+                    10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+                };
 
-                //удаление элементов
-                list.Delete(6);
-                list.Delete(10);
-                list.Delete(20);
-                list.Delete(30);
+                Console.WriteLine($"-> Колличество элементов в списке = {numList.Count}.\n");
+                Console.Write("-> Содержимое списка:");
 
-                Console.WriteLine();
+                ForEach(numList);
+                TitleMessage("Удаление из списка чисел 10, 20, 30.");
 
-                foreach (var item in list)
-                {
-                    Console.Write($"{item} ");
-                }
+                numList.Delete(10);
+                numList.Delete(20);
+                numList.Delete(30);
 
-                //Добавить 100 в начало списка
-                list.AppendHead(100);
+                Console.WriteLine($"-> Колличество элементов в списке после удаления трёх чисел: {numList.Count}.\n");
+                Console.Write("-> Содержимое списка после удаления трёх чисел: ");
 
-                Console.WriteLine();
+                ForEach(numList);
+                TitleMessage("Добавить число 90 в начало списка.");
 
-                foreach (var item in list)
-                {
-                    Console.Write($"{item} ");
-                }
+                numList.AppendHead(90);
 
-                //Очистка списка
-                list.Clear();
+                Console.Write("-> Содержимое списка после добавления числа в начало: ");
 
-                Console.WriteLine();
+                ForEach(numList);
+                TitleMessage("Вставка числа 1000, после числа 80.");
 
-                foreach (var item in list)
-                {
-                    Console.Write($"{item} ");
-                }          
+                numList.InsertAfter(80, 1000);
+
+                Console.Write("-> Содержимое списка, после вставки числа 1000, которое вставляют после числа 80: ");
+
+                ForEach(numList);
+                TitleMessage("Полная очистка списка!");
+
+                numList.Clear();
+
+                Console.Write("-> Содержимое списка после его очистки: ");
+
+                ForEach(numList);
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine($"Message:    ---> {exc.Message}   ");
+                Console.WriteLine($"StackTrace: ---> {exc.StackTrace}");
+                Console.WriteLine($"TargetSite: ---> {exc.TargetSite}");
             }
             catch (ArgumentNullException exc)
             {
@@ -66,39 +69,38 @@ namespace SinglyLinkedList
                 Console.WriteLine($"StackTrace: ---> {exc.StackTrace}");
                 Console.WriteLine($"TargetSite: ---> {exc.TargetSite}");
             }
+            catch (Exception exc)
+            {
+                Console.WriteLine($"Message:    ---> {exc.Message}   ");
+                Console.WriteLine($"StackTrace: ---> {exc.StackTrace}");
+                Console.WriteLine($"TargetSite: ---> {exc.TargetSite}");
+            }
         }
 
-        private static void TestInsert()
+        /// <summary>
+        /// Метод для минимизации повторяющегося кода; 
+        /// Метод содержит: foreach (int item in instance)
+        /// </summary>
+        private static void ForEach(LinkedList<int> instance)
         {
-            var list = new LinkedList<int>();
-
-            list.Add(10);
-            list.Add(20);
-            list.Add(30);
-            list.Add(40);
-
-            foreach (var item in list)
+            foreach (int item in instance)
             {
-                Console.Write($"{item} ");
+                Console.Write($" {item} ");
             }
 
-            list.InsertAfter(10, 40);
-
-            Console.WriteLine();
-
-            foreach (var item in list)
-            {
-                Console.Write($"{item} ");
-            }
-
-            list.InsertAfter(10, 40000);
-
-            Console.WriteLine();
-
-            foreach (var item in list)
-            {
-                Console.Write($"{item} ");
-            }
+            Console.WriteLine("\n");
         }
+
+        /// <summary>
+        /// Метод для минимизации повторяющегося кода; 
+        /// Вывод сообщения в определенном формате.
+        /// </summary>
+        private static void TitleMessage(string message)
+        {
+            Console.WriteLine("=====================================================================");
+            Console.WriteLine($"{message}");
+            Console.WriteLine("=====================================================================\n");
+        }
+
     }
 }

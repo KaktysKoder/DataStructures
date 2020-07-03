@@ -5,7 +5,7 @@ namespace SinglyLinkedList.Model
     /// <summary>
     /// Односвязный список.
     /// </summary>
-    internal sealed class LinkedList<T> : IEnumerable
+    internal sealed class LinkedList<T> : IEnumerable, ISingleLinkedList<T>
     {
         /// <summary>
         /// Первый элемент списка.
@@ -114,6 +114,9 @@ namespace SinglyLinkedList.Model
             Count++;
         }
 
+        /// <summary>
+        /// Вставить данные после скомого значения.
+        /// </summary>
         public void InsertAfter(T target, T data)
         {
             if (Head != null)
@@ -127,8 +130,8 @@ namespace SinglyLinkedList.Model
                         //Элемент который мы хотим вставить.
                         var item = new Item<T>(data);
 
-                        item.Next = Head.Next;
-                        Head.Next = item;
+                        item.Next = current.Next;
+                        current.Next = item;
                         Count++;
 
                         return;
