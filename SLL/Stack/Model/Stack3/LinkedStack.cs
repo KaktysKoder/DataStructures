@@ -4,10 +4,6 @@ namespace Stack.Model
 {
     internal sealed class LinkedStack<T>
     {
-        public Item<T> Head { get; set; }
-
-        public int Count { get; set; }
-
         public LinkedStack()
         {
             Head  = null;
@@ -20,29 +16,32 @@ namespace Stack.Model
             Count = 1;
         }
 
+        public Item<T> Head { get; set; }
+        public int Count    { get; set; }
+
         public void Push(T data)
         {
-            var item = new Item<T>(data);
+            Item<T> item = new Item<T>(data)
+            {
+                Previous = Head
+            };
 
-            item.Previous = Head;
             Head = item;
             Count++;
         }
 
         public T Pop()
         {
-            if (Count != null)
+            if (Count != 0)
             {
-                var item = Head;
+                Item<T> item = Head;
+
                 Head = Head.Previous;
                 Count--;
 
                 return item.Data;
             }
-            else
-            {
-                throw new NullReferenceException("Стек пуст");
-            }
+            else throw new NullReferenceException("Stack is empty!");
         }
 
         public T Peek()
@@ -51,10 +50,7 @@ namespace Stack.Model
             {
                 return Head.Data;
             }
-            else
-            {
-                throw new NullReferenceException("Стек пуст");
-            }
+            else throw new NullReferenceException("Stack is empty!");
         }
     }
 }
