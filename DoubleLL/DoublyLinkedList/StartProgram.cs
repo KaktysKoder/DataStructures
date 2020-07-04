@@ -7,6 +7,39 @@ namespace DoublyLinkedList
     {
         private static void Main()
         {
+            Test2();
+        }
+
+        private static void Test2()
+        {
+            CircularLinkedList<int> circlerList = new CircularLinkedList<int>();
+
+            circlerList.Add(1);
+            circlerList.Add(2);
+            circlerList.Add(3);
+            circlerList.Add(4);
+            circlerList.Add(5);
+
+
+            foreach (var item in circlerList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine();
+
+            circlerList.Delete(1);
+            circlerList.Delete(2);
+            circlerList.Delete(3);
+
+            foreach (var item in circlerList)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static void Test1()
+        {
             DuplexLinkedList<int> duplex = new DuplexLinkedList<int>();
 
             duplex.Add(10);
