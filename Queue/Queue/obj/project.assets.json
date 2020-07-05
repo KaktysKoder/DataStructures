@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ElevenDataStructuresImplementation\\SingleLL\\SinglyLinkedList\\SinglyLinkedList.csproj",
-      "projectName": "SinglyLinkedList",
-      "projectPath": "F:\\ElevenDataStructuresImplementation\\SingleLL\\SinglyLinkedList\\SinglyLinkedList.csproj",
+      "projectUniqueName": "F:\\ElevenDataStructuresImplementation\\Queue\\Queue\\Queue.csproj",
+      "projectName": "Queue",
+      "projectPath": "F:\\ElevenDataStructuresImplementation\\Queue\\Queue\\Queue.csproj",
       "packagesPath": "C:\\Users\\Rimutu\\.nuget\\packages\\",
-      "outputPath": "F:\\ElevenDataStructuresImplementation\\SingleLL\\SinglyLinkedList\\obj\\",
+      "outputPath": "F:\\ElevenDataStructuresImplementation\\Queue\\Queue\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Microsoft\\Xamarin\\NuGet\\"

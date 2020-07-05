@@ -1,0 +1,13 @@
+F:\ElevenDataStructuresImplementation\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.exe
+F:\ElevenDataStructuresImplementation\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.deps.json
+F:\ElevenDataStructuresImplementation\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.json
+F:\ElevenDataStructuresImplementation\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.dev.json
+F:\ElevenDataStructuresImplementation\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.dll
+F:\ElevenDataStructuresImplementation\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.pdb
+F:\ElevenDataStructuresImplementation\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csprojAssemblyReference.cache
+F:\ElevenDataStructuresImplementation\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfoInputs.cache
+F:\ElevenDataStructuresImplementation\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfo.cs
+F:\ElevenDataStructuresImplementation\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csproj.CoreCompileInputs.cache
+F:\ElevenDataStructuresImplementation\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.dll
+F:\ElevenDataStructuresImplementation\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.pdb
+F:\ElevenDataStructuresImplementation\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.genruntimeconfig.cache
